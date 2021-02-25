@@ -1,3 +1,3 @@
-<?=foreach($notes => $note):?>
+<?foreach($notes => $note) :?>
 <?= $note->name?>
 <?endforeach;?>
