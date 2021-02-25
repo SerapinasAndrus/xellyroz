@@ -28,7 +28,7 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-    if (Yii::$app->user->isGuest){$xelly = 'Заметки';}else{$xelly = Yii::$app->user-name;}
+    if (Yii::$app->user->isGuest){$xelly = 'Гость';}else{$xelly = Yii::$app->user-name;}
     NavBar::begin([
         'brandLabel' => $xelly,
         'brandUrl' => Yii::$app->homeUrl,
