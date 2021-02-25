@@ -14,7 +14,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-
+use frontend\models\Notes;
 /**
  * Site controller
  */
@@ -74,7 +74,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+                $notes = Notes::find()->all();
+                return $this->render('index', [
+                    'notes' => $notes
+                ]);
     }
 
     /**

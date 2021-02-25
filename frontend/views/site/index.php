@@ -2,13 +2,17 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'XellyRoz - Заметки';
+$this->title = 'XellyRoz';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
-
+<?php foreach($notes as $note):?>
+    <div class='col-lg-4'>
+        <a href="<?=Url::to(['notes/note', 'id' => $note->id])?>"><?=$note->name?></a>
+    </div>
+<?php endForeach;?>
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
