@@ -78,7 +78,7 @@ class SiteController extends Controller
         return $this->redirect(['login']);
     }else{
                 $userid = Yii::$app->user->id;
-                $notes = Notes::find()->where('userid' => $userid);
+                $notes = Notes::find()->where('userid' => $userid)->all();
                 return $this->render('index', [
                     'notes' => $notes
                 ]);
