@@ -77,8 +77,9 @@ class SiteController extends Controller
     if (Yii::$app->user->isGuest){
         return $this->redirect(['login']);
     }else{
-
-                if(Yii::$app->request->isPost){
+                 $model = new Notes();
+                if($model->load(Yii::$app->request->post()){
+                $model-save();
                     $newnotes = new Notes();
                     $newnotes->name = Yii::$app->request->post('name');
                     $newnotes->title = Yii::$app->request->post('title');
@@ -86,7 +87,7 @@ class SiteController extends Controller
                     $newnotes->save();
                     $this->goHome();
                 }
-                $model = new Notes();
+
                 $userid = Yii::$app->user->id;
                 $notes = Notes::find()->where(['userid' => $userid])->all();
                 return $this->render('index', [
