@@ -2,6 +2,7 @@
 
 use yii\helpers\Url;
 use frontend\models\Notes;
+use yii\widgets\ActiveForm;
 $model = new Notes();
 /* @var $this yii\web\View */
 
