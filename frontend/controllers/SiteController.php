@@ -77,7 +77,7 @@ class SiteController extends Controller
     if (Yii::$app->user->isGuest){
         return $this->redirect(['login']);
     }
-                $notes = Notes::find()->where('userid' => Yii::$app->user->identity->id);
+                $notes = Notes::find()->where('userid' => Yii::$app->user->id);
                 return $this->render('index', [
                     'notes' => $notes
                 ]);
