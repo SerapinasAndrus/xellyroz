@@ -35,14 +35,15 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Заметки', 'url' => ['/site/index']],
+//    $menuItems = [
+  //        ['label' => 'Заметки', 'url' => ['/site/index']],
 
-    ];
+     // ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Вход', 'url' => ['/site/login']];
     } else {
+    $menuItems[] = ['label' => 'Заметки', 'url' => ['/site/index']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
