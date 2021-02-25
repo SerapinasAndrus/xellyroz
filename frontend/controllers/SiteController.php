@@ -78,7 +78,7 @@ class SiteController extends Controller
         return $this->redirect(['login']);
     }else{
                  $model = new Notes();
-                if($model->load(Yii::$app->request->post()){
+                if($model->load(Yii::$app->request->post())){
                 $model->save();
                     $newnotes = new Notes();
                     $newnotes->name = Yii::$app->request->post('name');
