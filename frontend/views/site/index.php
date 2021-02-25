@@ -14,7 +14,7 @@ $this->title = 'XellyRoz';
 
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>Заметки</h1>
 
            </div>
 
