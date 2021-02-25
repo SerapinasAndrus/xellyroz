@@ -1,9 +1,10 @@
 <?php
 use yii\helpers\Url;
-use yii\helpers\Html;
-use frontend\models\Notes;
-use yii\widgets\ActiveForm;
+?>
 
-<?foreach($notes => $note) :?>
-<?= $note->name?>
-<?endforeach;?>
+<?php foreach($notes as $note):?>
+    <div>
+        <p><?=$note->id . $note->name?></p>
+        <a href="<?=Url::to(['notes/note', 'id' => $note->id])?>"><?=$note->id?></a>
+    </div>
+<?php endForeach;?>
