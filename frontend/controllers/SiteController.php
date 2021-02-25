@@ -74,6 +74,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+    if (Yii::$app->user->isGuest){
+        return $this->redirect(['login']);
+    }
                 $notes = Notes::find()->all();
                 return $this->render('index', [
                     'notes' => $notes
