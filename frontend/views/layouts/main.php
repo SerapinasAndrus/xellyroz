@@ -28,8 +28,9 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
+    if (Yii::$app->user->isGuest){$xelly = 'Заметки';}else{$xelly = Yii::$app->user-name;}
     NavBar::begin([
-        'brandLabel' => 'XellyRoz',
+        'brandLabel' => $xelly,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
