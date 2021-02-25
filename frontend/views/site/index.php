@@ -21,7 +21,7 @@ $this->title = 'XellyRoz';
 
         <div class="row">
         <?php foreach($notes as $note):?>
-           <div class="col-lg-4">
+           <div class="col-lg-3">
                            <h2><a href="<?=Url::to(['notes/note', 'id' => $note->id])?>"><?=$note->name?></a></h2>
             </div>
             <?php endForeach;?>
