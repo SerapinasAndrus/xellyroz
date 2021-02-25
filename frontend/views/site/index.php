@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Url;
-
+use frontend\models\Notes;
 $model = new Notes();
 /* @var $this yii\web\View */
 
