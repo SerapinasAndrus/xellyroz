@@ -80,7 +80,7 @@ class SiteController extends Controller
                 if(Yii::$app->request->post()){
                     $newnotes = new Notes;
                     $newnotes->name = Yii::$app->request->post()['name'];
-                    $newnotes->title = Yii::$app->request->post()['title'].'hhh';
+                    $newnotes->title = Yii::$app->request->post()['title'];
                     $newnotes->userid = Yii::$app->user->id;
                     $newnotes->save();
                     $this->goHome();
