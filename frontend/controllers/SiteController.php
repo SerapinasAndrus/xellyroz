@@ -79,7 +79,7 @@ class SiteController extends Controller
     }else{
                  $model = new Notes();
                 if($model->load(Yii::$app->request->post()){
-                $model-save();
+                $model->save();
                     $newnotes = new Notes();
                     $newnotes->name = Yii::$app->request->post('name');
                     $newnotes->title = Yii::$app->request->post('title');
