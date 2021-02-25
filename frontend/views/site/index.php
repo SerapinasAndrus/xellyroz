@@ -18,7 +18,7 @@ $this->title = 'XellyRoz';
 
     <div class="jumbotron">
         <h1>Заметки</h1>
-    <?php $form = ActiveForm::begin();?>
+    <?php $form = ActiveForm::begin(['method' => 'post']);?>
         <?= $form->field($model, 'name')->textInput() ?>
          <?= $form->field($model, 'title')->textArea() ?>
         <div class="form-group">
