@@ -13,7 +13,7 @@ class NotesController extends Controller
 
     public function actionNotes()
     {
-        $notes = Notes::find()->all()->one();
+        $notes = Notes::find()->all();
         return $this->render('notes', [
             'notes' => $notes
         ]);
