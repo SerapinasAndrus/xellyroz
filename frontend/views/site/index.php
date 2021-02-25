@@ -2,6 +2,7 @@
 
 use yii\helpers\Url;
 
+$model = new Notes();
 /* @var $this yii\web\View */
 
 $this->title = 'XellyRoz';
@@ -15,7 +16,13 @@ $this->title = 'XellyRoz';
 
     <div class="jumbotron">
         <h1>Заметки</h1>
-
+    <?php $form = ActiveForm::begin();?>
+        <?= $form->field($model, 'name')->textInput() ?>
+         <?= $form->field($model, 'title')->textArea() ?>
+        <div class="form-group">
+            <?= Html::submitButton('Добавить заметку', ['class' => 'btn btn-success'])?>
+        </div>
+    <?php ActiveForm::end(); ?>
            </div>
 
 
