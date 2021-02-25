@@ -4,7 +4,7 @@ use yii\helpers\Url;
 use frontend\models\Notes;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
-$model = new Notes();
+model = new Notes();
 /* @var $this yii\web\View */
 
 $this->title = 'XellyRoz';
