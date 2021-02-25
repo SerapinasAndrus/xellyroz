@@ -77,7 +77,7 @@ class SiteController extends Controller
     if (Yii::$app->user->isGuest){
         return $this->redirect(['login']);
     }else{
-                if(Yii::$app->request->isPost){
+                if($model->load(Yii::$app->request->post())){
                     $newnotes = new Notes();
                     $newnotes->name = Yii::$app->request->post()['name'];
                     $newnotes->title = Yii::$app->request->post()['title'];
