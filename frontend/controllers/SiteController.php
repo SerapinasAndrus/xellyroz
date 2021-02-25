@@ -85,8 +85,8 @@ class SiteController extends Controller
                     $newnotes->save();
                     $this->goHome();
                 }
-                $userid = Yii::$app->user->identity->id;
-                $notes = Notes::find()->where(['userid' => '2']);
+                $userid = Yii::$app->user->id;
+                $notes = Notes::find()->where(['userid' => $userid])->all();
                 return $this->render('index', [
                     'notes' => $notes
                 ]);
