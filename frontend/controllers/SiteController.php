@@ -84,7 +84,7 @@ class SiteController extends Controller
                     $newnotes->name = Yii::$app->request->post()['Notes']['name'];
                     $newnotes->text = Yii::$app->request->post()['Notes']['text'];
                     $newnotes->userid = Yii::$app->user->id;
-                    $newnotes->date = date("YYYY-MM-DD");
+                    $newnotes->date = date();
                     $newnotes->save();
                     $this->goHome();
                        }
