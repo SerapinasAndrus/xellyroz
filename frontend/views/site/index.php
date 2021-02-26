@@ -20,7 +20,7 @@ $this->title = 'XellyRoz';
         <h1>Заметки</h1>
     <?php $form = ActiveForm::begin();?>
         <?= $form->field($model, 'name')->textInput(); ?>
-         <?= $form->field($model, 'title')->textArea(); ?>
+         <?= $form->field($model, 'text')->textArea(); ?>
         <div class="form-group">
             <?= Html::submitButton('Добавить заметку', ['class' => 'btn btn-success'])?>
         </div>

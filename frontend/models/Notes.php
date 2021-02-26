@@ -13,7 +13,7 @@ public function rules(){
 	return [
 
 		[ ['name'],'string'],
-		[ ['title'],'string'],
+		[ ['text'],'string'],
 
 
 	];
