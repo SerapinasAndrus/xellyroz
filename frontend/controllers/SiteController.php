@@ -97,7 +97,7 @@ class SiteController extends Controller
                     'model' => $model
                 ]);
                 }
-    }
+
 
     /**
      * Logs in a user.
