@@ -41,7 +41,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-            '/' => 'frontend/web/site/index',
+            '/' => 'frontend/web/',
             'note' => 'frontend/web/site/note',
             ],
         ],
