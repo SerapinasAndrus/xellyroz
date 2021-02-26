@@ -99,7 +99,7 @@ class SiteController extends Controller
                 }
     public function actionNote(){
         if(Yii::$app->request->isGet){
-            $note = Notes::find()->where(['id' => Yii::$app->request->get()['id']])->one();
+            $note = Notes::find()->where(['id' => Yii::$app->request->get()['id'] AND 'userid' => Yii::$app->user->id])->one();
             return $this->render('note', [
             'note' => $note
             ]);
