@@ -100,7 +100,7 @@ class SiteController extends Controller
     public function actionNote(){
         if(Yii::$app->request->isGet){
             $note = Notes::find()->where(['id' => Yii::$app->request->get()['id']])->one();
-            return $this->render('note' [
+            return $this->render('note', [
             'note' => $note
             ]);
         }
