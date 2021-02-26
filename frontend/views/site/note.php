@@ -16,9 +16,9 @@ $this->title = 'XellyRoz';
 
 
     <div class="jumbotron">
-<h1><?=$note->name . '[' . $note->date . ']'?></h1>
+<h1><?=$note->name . '<br>[' . $note->date . ']'?></h1>
     <p><?=$note->text?></p>
-
+    <a href="/">Заметки</a>
            </div>
 
 
