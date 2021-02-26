@@ -25,9 +25,9 @@ $this->title = 'XellyRoz';
             <?= Html::submitButton('Добавить заметку', ['class' => 'btn btn-success'])?>
         </div>
     <?php ActiveForm::end(); ?>
-    <h1>Ваши Заметки:</h1>
-           </div>
 
+           </div>
+<h1>Ваши Заметки:</h1>
 
         <div class="row">
         <?php foreach($notes as $note):?>
