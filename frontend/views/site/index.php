@@ -17,7 +17,7 @@ $this->title = 'XellyRoz';
 
 
     <div class="jumbotron">
-        <h1>Заметки</h1>
+
     <?php $form = ActiveForm::begin();?>
         <?= $form->field($model, 'name')->textInput(); ?>
          <?= $form->field($model, 'text')->textArea(); ?>
@@ -25,6 +25,7 @@ $this->title = 'XellyRoz';
             <?= Html::submitButton('Добавить заметку', ['class' => 'btn btn-success'])?>
         </div>
     <?php ActiveForm::end(); ?>
+    <h1>Ваши Заметки:</h1>
            </div>
 
 
