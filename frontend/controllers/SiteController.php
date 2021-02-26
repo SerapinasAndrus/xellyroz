@@ -91,7 +91,7 @@ class SiteController extends Controller
                 }
 
                 $userid = Yii::$app->user->id;
-                $notes = Notes::find()->where(['userid' => $userid])->all();
+                $notes = Notes::find()->where(['userid' => $userid])->orderBy('id DESC')->all();
                 return $this->render('index', [
                     'notes' => $notes,
                     'model' => $model
