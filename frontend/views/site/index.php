@@ -33,7 +33,7 @@ $this->title = 'XellyRoz';
         <?php foreach($notes as $note):?>
            <div class="col-lg-3">
 
-                           <h2><a class="label label-warning" href="<?=Url::to(['site/note', 'id' => $note->id])?>"><?=$note->name?></a><br>[<?=$note->date?>]<br>...</h2>
+                           <h2><a class="label label-warning" href="<?=Url::to(['site/note', 'id' => $note->id])?>"><?=$note->name?></a><br>[<?=$note->date?>]<br> ...</h2>
 
             </div>
             <?php endForeach;?>
